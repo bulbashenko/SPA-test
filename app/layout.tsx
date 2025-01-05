@@ -32,10 +32,6 @@ export default function RootLayout({
           </header>
 
           <main className="container mx-auto px-4 py-6">{children}</main>
-
-          <footer className="mt-10 border-t py-4 text-center text-sm text-muted-foreground">
-            <p>© {new Date().getFullYear()} My Store. All rights reserved.</p>
-          </footer>
         </Providers>
       </body>
     </html>

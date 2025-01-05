@@ -5,8 +5,7 @@ const nextConfig: NextConfig = {
     domains: ['fakestoreapi.com'],
     unoptimized: true
   },
-  output: 'export',
-  basePath: '/SPA-test', // Замените REPO_NAME на имя вашего репозитория
+  output: 'export'
 };
 
 export default nextConfig;

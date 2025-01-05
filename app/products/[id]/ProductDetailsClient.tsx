@@ -3,6 +3,7 @@
 import { Product } from "@/redux/slices/productsSlice";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 type Props = {
   product: Product;
@@ -18,10 +19,12 @@ export default function ProductDetailsClient({ product }: Props) {
   return (
     <div className="p-4 flex flex-col md:flex-row gap-4">
       <div className="relative w-full md:w-1/3 h-64">
-        <img
+        <Image
           src={product.image}
           alt={product.title}
-          className="object-cover w-full h-full rounded"
+          width={300}
+          height={300}
+          className="object-cover rounded"
         />
       </div>
 

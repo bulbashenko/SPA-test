@@ -57,7 +57,7 @@ export default function ProductCard({ product }: Props) {
             src={product.image}
             alt={product.title}
             fill
-            className="object-cover"
+            className="object-contain"
           />
         </div>
         <p className="text-sm line-clamp-2 text-muted-foreground">
