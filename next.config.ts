@@ -3,9 +3,9 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   images: {
     domains: ['fakestoreapi.com'],
-    unoptimized: true
+    unoptimized: true,
   },
-  output: 'export'
+  output: 'export',
 };
 
 export default nextConfig;

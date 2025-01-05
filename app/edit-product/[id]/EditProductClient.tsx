@@ -1,23 +1,23 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Product, updateProduct } from "@/redux/slices/productsSlice";
-import { useDispatch } from "react-redux";
-import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { useState } from 'react';
+import { Product, updateProduct } from '@/redux/slices/productsSlice';
+import { useDispatch } from 'react-redux';
+import { useRouter } from 'next/navigation';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from '@/components/ui/select';
 
 const categories = [
-  "electronics",
-  "jewelery",
+  'electronics',
+  'jewelery',
   "men's clothing",
   "women's clothing",
 ];
@@ -47,7 +47,7 @@ export default function EditProductClient({ product }: EditProductClientProps) {
         category,
       })
     );
-    router.push("/products");
+    router.push('/products');
   };
 
   return (

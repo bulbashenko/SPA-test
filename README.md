@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Тестовое задание для Экосистемы Альфа
 
-## Getting Started
+ФИО: Альбеков Александр Евгеньевич
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Реализованные функции
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1. **Страница списка продуктов (/products)**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Отображение карточек**: Каждая карточка показывает изображение и урезанный текст.
+- **Функциональность лайков**:
+  - Нажмите на иконку лайка, чтобы поставить или убрать лайк.
+  - Иконка визуально обновляется при установленном лайке.
+- **Функциональность удаления**:
+  - Нажмите на иконку удаления, чтобы удалить карточку из списка.
+- **Фильтрация**:
+  - Просмотр всех карточек или только добавленных в избранное.
+  - Фильтрация по категориям
+  - Функция поиска (без кнопки отправки)
+- **Навигация**:
+  - Нажатие на любую часть карточки (кроме иконок лайка, удаления и редактирования) перенаправляет на страницу подробной информации о продукте.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. **Страница продукта (/products/:id)**
 
-## Learn More
+- Отображает детальную информацию о выбранном продукте.
+- Кнопка для возврата на главную страницу со списком продуктов.
 
-To learn more about Next.js, take a look at the following resources:
+### 3. **Страница создания продукта (/create-product)**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Форма для создания продукта**:
+  - Обязательные поля с минимальной валидацией.
+- **Интеграция с хранилищем**:
+  - После отправки формы данные сохраняются в глобальное хранилище.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Используемые технологии
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **NextJS (React)**: Причина — [https://react.dev/learn/start-a-new-react-project](https://react.dev/learn/start-a-new-react-project)
+- **TypeScrip, Redux Toolkit, fakestoreapi**
+- **UI-библиотеки**: shadcn/ui, tailwindcss
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Демонстрация
+
+Проект размещён на GitHub Pages. Ознакомиться можно по ссылке: [https://spa.bulbashenko.com/](https://spa.bulbashenko.com/)
+
+---
+
+## Лицензия
+
+Этот проект распространяется под лицензией MIT. Подробнее в файле LICENSE.

@@ -1,7 +1,7 @@
 import ProductsClient from './products-client';
 import { Product } from '@/redux/slices/productsSlice';
 
-async function getData(){
+async function getData() {
   const res = await fetch('https://fakestoreapi.com/products');
   const data: FakeStoreProduct[] = await res.json();
 

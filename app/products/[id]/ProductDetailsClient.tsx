@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { Product } from "@/redux/slices/productsSlice";
-import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { Product } from '@/redux/slices/productsSlice';
+import { useRouter } from 'next/navigation';
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 type Props = {
   product: Product;
@@ -13,7 +13,7 @@ export default function ProductDetailsClient({ product }: Props) {
   const router = useRouter();
 
   const handleBackClick = () => {
-    router.push("/products");
+    router.push('/products');
   };
 
   return (

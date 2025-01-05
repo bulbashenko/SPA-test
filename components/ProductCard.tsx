@@ -16,6 +16,10 @@ import {
 } from '@/redux/slices/productsSlice';
 import Image from 'next/image';
 
+// Импортируем иконки из react-icons
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import { FiEdit, FiTrash2 } from 'react-icons/fi'; // Дополнительные иконки для кнопок редактирования и удаления
+
 interface Props {
   product: Product;
 }
@@ -66,15 +70,36 @@ export default function ProductCard({ product }: Props) {
       </CardContent>
       <CardFooter className="flex justify-between items-center">
         <div className="flex gap-1">
-          <Button variant="outline" size="sm" onClick={handleLikeClick}>
-            {product.liked ? '♥' : '♡'}
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handleLikeClick}
+            aria-label={
+              product.liked ? 'Удалить из избранного' : 'Добавить в избранное'
+            }
+          >
+            {product.liked ? (
+              <FaHeart className="text-red-500" />
+            ) : (
+              <FaRegHeart />
+            )}
           </Button>
-          <Button variant="outline" size="sm" onClick={handleDeleteClick}>
-            Удалить
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handleDeleteClick}
+            aria-label="Удалить продукт"
+          >
+            <FiTrash2 />
           </Button>
         </div>
-        <Button variant="default" size="sm" onClick={handleEditClick}>
-          Редактировать
+        <Button
+          variant="default"
+          size="sm"
+          onClick={handleEditClick}
+          aria-label="Редактировать продукт"
+        >
+          <FiEdit />
         </Button>
       </CardFooter>
     </Card>

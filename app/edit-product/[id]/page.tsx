@@ -1,8 +1,8 @@
-import EditProductClient from "./EditProductClient";
-import { Product } from "@/redux/slices/productsSlice";
+import EditProductClient from './EditProductClient';
+import { Product } from '@/redux/slices/productsSlice';
 
 export async function generateStaticParams() {
-  const res = await fetch("https://fakestoreapi.com/products");
+  const res = await fetch('https://fakestoreapi.com/products');
   const data = (await res.json()) as Array<{ id: number }>;
 
   return data.map((item) => ({
@@ -27,8 +27,11 @@ async function getProduct(id: string): Promise<Product | null> {
   return mapped;
 }
 
-
-export default async function EditProductPage({ params }: {params: Promise<{id: string}>}) {
+export default async function EditProductPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const product = await getProduct(id);
   if (!product) {
