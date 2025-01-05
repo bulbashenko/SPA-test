@@ -2,8 +2,6 @@
 
 ФИО: Альбеков Александр Евгеньевич
 
----
-
 ## Реализованные функции
 
 ### 1. **Страница списка продуктов (/products)**
@@ -33,21 +31,17 @@
 - **Интеграция с хранилищем**:
   - После отправки формы данные сохраняются в глобальное хранилище.
 
----
-
 ## Используемые технологии
 
 - **NextJS (React)**: Причина — [https://react.dev/learn/start-a-new-react-project](https://react.dev/learn/start-a-new-react-project)
 - **TypeScrip, Redux Toolkit, fakestoreapi**
 - **UI-библиотеки**: shadcn/ui, tailwindcss
 
----
 
 ## Демонстрация
 
 Проект размещён на GitHub Pages. Ознакомиться можно по ссылке: [https://spa.bulbashenko.com/](https://spa.bulbashenko.com/)
 
----
 
 ## Лицензия
 
