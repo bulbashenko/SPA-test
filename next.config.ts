@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     domains: ['fakestoreapi.com'],
     unoptimized: true,
   },
-  output: 'export',
+  // output: 'export',
 };
 
 export default nextConfig;
